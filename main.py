@@ -4,11 +4,10 @@ import life_game as lg
 def main():
     rows = 40
     columns = 40
-    iterations = 1000
-    sizeup = 20
+    iterations = 100
+    sizeup = 10
 
-    #board = lg.init_board(rows, columns)
-    board = lg.init_board(rows, columns, method="read", filepath="boards/aBoard.board")
+    board = lg.init_board(rows, columns)
     paddedBoard = lg.pad_board(board)
 
     for it in range(iterations):
@@ -20,7 +19,7 @@ def main():
 
         #im = Image.fromarray(biggerBoard,'1')
         im = toimage(biggerBoard)
-        im.save(str("result/test%d.png" % it))
+        im.save(str("results/test%d.png" % it))
 
 
 main()
