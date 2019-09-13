@@ -67,7 +67,7 @@ def init_board(rows, columns, method="random"):
         None
     """
     if method == "random":
-        board = ???
+        board = np.random.random_integers(2, size=(rows, columns)) - 1
     return board
 
 
