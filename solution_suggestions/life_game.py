@@ -139,7 +139,8 @@ def pad_board(board):
         board (np.array): a numpy matrix with dimensions of the original board
 
     Returns:
-        np.array: a numpy matrix with dimensions +1 in all directions of the original board
+        np.array: a numpy matrix with dimensions +1 in all directions
+                  of the original board
 
     Raises:
         None
@@ -193,4 +194,3 @@ def get_next_board(paddedBoard):
                     nextBoard[r - 1][c - 1] = 0
 
     return nextBoard
-    
