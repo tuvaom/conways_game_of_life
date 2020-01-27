@@ -1,5 +1,6 @@
-from scipy.misc import toimage
+import matplotlib.pyplot as plt
 import life_game as lg
+
 
 def main():
     rows = 40
@@ -17,9 +18,9 @@ def main():
         biggerBoard = nextBoard.repeat(sizeup, axis=0)
         biggerBoard = biggerBoard.repeat(sizeup, axis=1)
 
-        #im = Image.fromarray(biggerBoard,'1')
-        im = toimage(biggerBoard)
-        im.save(str("results/test%d.png" % it))
+        # im = Image.fromarray(biggerBoard,'1')
+        plt.imshow(biggerBoard,'gray')
+        plt.savefig(str("results/test%d.png" % it), bbox_inches='tight')
 
 
 main()
