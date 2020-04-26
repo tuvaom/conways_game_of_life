@@ -1,6 +1,6 @@
 # conways_game_of_life
 This is a repo for the practical session in software development training, intended for the hypso sw group.
-The Presentation and a compiled docker image can be found [here](docs/presentation.pdf)
+The Presentation can be found [here](docs/presentation.pdf)
 . The tasks are intended to be completed in python.
 
 ## The Rules of the Game
