@@ -1,1 +1,5 @@
 theme: jekyll-theme-minimal
+title: HYPSO SW Practical Session
+logo: /docs/logo.png
+description: A repo for practical session in software development training in hypso sw group
+show_downloads: true
