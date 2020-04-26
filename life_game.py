@@ -41,7 +41,7 @@ def check_neighbours(r, c, board):
 
     for x in range(r - 1, r + 1):
         for y in range(c - 1, c + 1):
-		NeighboursSum = NeighboursSum * board[x][y]
+            NeighboursSum = NeighboursSum * board[x][y]
 
     return NeighboursSum
 
@@ -91,17 +91,18 @@ def pad_board(board):
     return board
 
 
-def get_next_board(paddedBoard):
+def get_next_board(Board):
     """Iterates from a paddedboard to the next board in Conway's game of life
 
     Extended description of function.
 
     Args:
-        paddedBoard (np.array ): a numpy matrix with dimensions +1
-                                 in all directions of the original board
+        paddedBoard (np.array ): a numpy matrix with dimensions of
+                                 the original board
 
     Returns:
-        nextBoard: a numpy matrix with dimensions  of the original board
+        Board: a numpy matrix with dimensions of the original board
+               updated to the next generation.
 
     Raises:
         None
@@ -109,9 +110,11 @@ def get_next_board(paddedBoard):
     Examples:
         None
     """
+    paddedBoard = pad_board(Board)
+
     dims = paddedBoard.shape
-    rows = dims[0]
-    cols = dims[1]
+    rows = dims[0] - 2
+    cols = dims[1] - 2
 
     nextBoard = np.zeros((rows, cols), dtype=int)
 
@@ -123,4 +126,3 @@ def get_next_board(paddedBoard):
             # ... ... ... ... ...
 
     return nextBoard
-    
