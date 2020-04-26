@@ -151,17 +151,18 @@ def pad_board(board):
     return np.pad(board, (1,), 'wrap')
 
 
-def get_next_board(paddedBoard):
+def get_next_board(Board):
     """Iterates from a paddedboard to the next board in Conway's game of life
 
     Extended description of function.
 
     Args:
-        paddedBoard (np.array ): a numpy matrix with dimensions +1
-                                 in all directions of the original board
+        paddedBoard (np.array ): a numpy matrix with dimensions of
+                                 the original board
 
     Returns:
-        nextBoard: a numpy matrix with dimensions  of the original board
+        Board: a numpy matrix with dimensions of the original board
+               updated to the next generation.
 
     Raises:
         None
@@ -169,6 +170,8 @@ def get_next_board(paddedBoard):
     Examples:
         None
     """
+    paddedBoard = pad_board(Board)
+
     dims = paddedBoard.shape
     rows = dims[0] - 2
     cols = dims[1] - 2
