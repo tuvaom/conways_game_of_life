@@ -72,7 +72,7 @@ def init_board(rows, columns, method="random"):
 
 
 def pad_board(board):
-    """Gives a wrap padding to a board in Conway's game of life
+    """Gives a padding to a board in Conway's game of life
 
     Extended description of function.
 
