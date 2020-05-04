@@ -1,6 +1,7 @@
 # conways_game_of_life
 This is a repo for the practical session in software development training, intended for the hypso sw group.
-The Presentation and a compiled docker image can be found here(TBD). The tasks are intended to be completed in python.
+The Presentation can be found [here](docs/presentation.pdf)
+. The tasks are intended to be completed in python.
 
 ## The Rules of the Game
 
@@ -16,7 +17,6 @@ The rules of the game:
 To learn more about the game please visit these relevant links:
 * https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
 * Gardner, Martin (October 1970). "Mathematical Games - The Fantastic Combinations of John Conway's New Solitaire Game 'Life'". Scientific American (223): 120–123. doi:10.1038/scientificamerican1070-120.
-*
 
 ## Tasks
 The following tasks is part of the practical session
