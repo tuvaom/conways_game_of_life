@@ -87,10 +87,10 @@ def test_get_next_board():
     assert np.array_equal(get_next_board(a), b)
 
 
-def test_read_board():
-    board = read_board("square.board")
-    true_board = np.array([[0, 0, 0, 0],
-                           [0, 1, 1, 0],
-                           [0, 1, 1, 0],
-                           [0, 0, 0, 0]])
-    np.array_equal(board, true_board)
+#def test_read_board():
+ #   board = read_board("square.board")
+   # true_board = np.array([[0, 0, 0, 0],
+    #                       [0, 1, 1, 0],
+     #                      [0, 1, 1, 0],
+      #                     [0, 0, 0, 0]])
+    #np.array_equal(board, true_board)
