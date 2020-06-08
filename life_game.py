@@ -39,10 +39,11 @@ def check_neighbours(r, c, board):
     """
     NeighboursSum = 0
 
-    for x in range(r - 1, r + 1):
-        for y in range(c - 1, c + 1):
-            NeighboursSum = NeighboursSum * board[x][y]
-
+    for x in range(r - 1, r + 2):
+        for y in range(c - 1, c + 2):
+            if (x ==r and y  == c):
+                continue
+             NeighboursSum += board[x][y]
     return NeighboursSum
 
 
@@ -88,6 +89,8 @@ def pad_board(board):
     Examples:
         None
     """
+    board = np.pad(board, 1 , mode ='constant')
+
     return board
 
 
@@ -110,19 +113,26 @@ def get_next_board(Board):
     Examples:
         None
     """
+    
     paddedBoard = pad_board(Board)
 
     dims = paddedBoard.shape
     rows = dims[0] - 2
     cols = dims[1] - 2
 
+    
     nextBoard = np.zeros((rows, cols), dtype=int)
 
     for r in range(1, dims[0] - 1):
         for c in range(1, dims[1] - 1):
-            numNeighbours = check_neighbours(r, c, paddedBoard)
-            # ... ... ... ... ...
-            # ... Game Logic  ...
-            # ... ... ... ... ...
+            numNeighbours = check_neighbours(r, c, paddedBoard) 
+            #Game logic: 
+            if paddedBoard[r][c] == 1:
+                if (numNeighbours == 2 or numNeighbours ==3):
+                    nextBoard[r-1][c-1] = 1
 
+            else:
+                if numNeighbours == 3:
+                    nextBoard[r-1][c-1] = 1
+            
     return nextBoard
